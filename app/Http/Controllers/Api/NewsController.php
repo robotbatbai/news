@@ -54,7 +54,7 @@ class NewsController extends ApiController
 
     	$this->token = hash_hmac('md5', $data, $this->key);
 
-    	$uri = "news/host?public_key=".$this->public_key."&token=".$this->token."&data=".$data;
+    	$uri = "news/hot?public_key=".$this->public_key."&token=".$this->token."&data=".$data;
 
     	try {
     		$response = $this->client->request('get', $uri);
